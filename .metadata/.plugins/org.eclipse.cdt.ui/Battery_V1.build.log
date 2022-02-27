@@ -1,0 +1,20 @@
+19:39:27 **** Incremental Build of configuration Debug for project Battery_V1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -IC:/Users/zmtan/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HAL_Driver/Inc -IC:/Users/zmtan/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IC:/Users/zmtan/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IC:/Users/zmtan/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IC:/Users/zmtan/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/zmtan/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Battery_V1.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\OneDrive - The University of Nottingham Ningbo China\STUDY\ZMtangyuan\Formular Student\Materials of the Battery box\Battery reader\Battery_V1\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Battery_V1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Battery_V1.elf
+ 
+arm-none-eabi-size   Battery_V1.elf 
+arm-none-eabi-objdump -h -S  Battery_V1.elf  > "Battery_V1.list"
+arm-none-eabi-objcopy  -O binary  Battery_V1.elf  "Battery_V1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  29056	    392	   8632	  38080	   94c0	Battery_V1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Battery_V1.bin
+ 
+Finished building: Battery_V1.list
+ 
+
+19:39:28 Build Finished. 0 errors, 0 warnings. (took 1s.467ms)
+

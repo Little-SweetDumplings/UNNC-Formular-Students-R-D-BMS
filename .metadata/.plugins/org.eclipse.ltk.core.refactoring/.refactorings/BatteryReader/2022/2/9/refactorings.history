@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BatteryReader/Battery_V1.ioc&apos; to &apos;BatteryReader.ioc&apos;" description="Rename resource &apos;Battery_V1.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Battery_V1.ioc" name="BatteryReader.ioc" stamp="1645893061338" updateReferences="true"/>
+</session>
